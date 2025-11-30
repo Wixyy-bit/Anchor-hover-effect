@@ -1,0 +1,44 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+font-family: 'helvetica neue';
+}
+html,body{
+width: 100%;
+height: 100%;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    anchor-name: --hehe;
+}
+a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+    mix-blend-mode: difference;
+}
+.white{
+    position: absolute;
+    position-anchor: --hehe;
+    left: anchor(--hehe left);
+    right: anchor(--hehe right);
+    top: anchor(--hehe top);
+    bottom: anchor(--hehe bottom);
+    background-color: white;
+    mix-blend-mode: difference;
+    transition: all 0.3s ease;
+}
+a:hover{
+    anchor-name: --hehe;
+}
+a:hover ~ .white{
+    border-radius: 10px;
+}
